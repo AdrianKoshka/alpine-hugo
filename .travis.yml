@@ -5,5 +5,7 @@ services:
 
 script:
   - docker build -t quay.io/adrianlucrececeleste/alpine-hugo .
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin quay.io
-  - docker push quay.io/adrianlucrececeleste/alpine-hugo
+
+deploy:
+  provider: script
+  script: bash docker_push
