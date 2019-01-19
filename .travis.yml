@@ -1,0 +1,6 @@
+language: generic
+
+script:
+  - docker build -t adrianlucrececeleste/alpine-hugo .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin quay.io
+  - docker push quay.io/adrianlucrececeleste/alpine-hugo
