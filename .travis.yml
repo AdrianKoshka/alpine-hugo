@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t quay.io/adrianlucrececeleste/alpine-hugo:$TRAVIS_BRANCH -t quay.io/adrianlucrececeleste/alpine-hugo:latest .
+  - docker build -t quay.io/adrianlucrececeleste/alpine-hugo:$TRAVIS_BRANCH -t quay.io/adrianlucrececeleste/alpine-hugo:latest -t docker.io/adrianlucrececeleste/alpine-hugo:$TRAVIS_BRANCH -t docker.io/adrianlucrececeleste/alpine-hugo:latest .
 
 deploy:
   - provider: script
