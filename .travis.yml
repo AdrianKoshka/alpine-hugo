@@ -11,4 +11,4 @@ deploy:
     script: bash docker_push
     on:
       tags: true
-      all_branches: true
+      branch: master
