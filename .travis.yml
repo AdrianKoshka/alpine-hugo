@@ -8,11 +8,14 @@ addons:
   apt:
     sources:
       - projectatomic
-      - sourceline: "ppa:projectatomic/ppa"
       - sourceline: "deb http://ppa.launchpad.net/projectatomic/ppa/ubuntu xenial main"
         key_url: "https://pgp.key-server.io/download/0x8BECF1637AD8C79D"
     packages:
       - buildah
+
+before_install:
+  - wget https://gist.github.com/AdrianKoshka/133e423ed239a4440ae61302a9cee71d/raw/62c3379e64296d678f57980645d37bb84b46fd93/registries.conf
+  - mkdir -p ~/.local/share/containers/ && mv registries.conf ~/.local/share/containers/
 
 script:
   - buildah bud -t quay.io/adrianlucrececeleste/alpine-hugo:$TRAVIS_BRANCH -t quay.io/adrianlucrececeleste/alpine-hugo:latest .
