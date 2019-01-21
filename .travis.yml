@@ -9,6 +9,8 @@ addons:
     sources:
       - projectatomic
       - sourceline: "ppa:projectatomic/ppa"
+      - sourceline: "deb http://ppa.launchpad.net/projectatomic/ppa/ubuntu xenial main"
+        key_url: "https://pgp.key-server.io/download/0x8BECF1637AD8C79D"
     packages:
       - buildah
 
