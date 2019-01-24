@@ -10,4 +10,5 @@ RUN apk update --no-cache \
     && rm LICENSE README.md hugo_0.53_Linux-64bit.tar.gz \
     && mv hugo /usr/local/bin/
 
+WORKDIR /workspace
 ENTRYPOINT [ "hugo" ]
