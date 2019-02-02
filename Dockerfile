@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 LABEL Author="Adrian Lucrèce Céleste adrianlucrececeleste@airmail.cc"
 
