@@ -1,6 +1,6 @@
 FROM alpine:3.9
 
-LABEL Author="Adrian Lucrèce Céleste adrianlucrececeleste@airmail.cc"
+LABEL maintainer="Adrian Lucrèce Céleste adrianlucrececeleste@airmail.cc"
 
 RUN apk update --no-cache \
     && apk upgrade --no-cache \
