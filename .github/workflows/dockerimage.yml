@@ -15,7 +15,7 @@ jobs:
 
 on: 
   push:
-    - releases/*
+    - 'releases/*'
 
 jobs:
 
